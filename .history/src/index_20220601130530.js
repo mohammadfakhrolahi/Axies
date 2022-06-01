@@ -1,154 +1,154 @@
-const productsDOM = document.querySelector('.todays-picks__nft-card')
-const cartItems = document.querySelector('.cart-items-badge')
-const cartTotal = document.querySelector('#total-price__price')
+// const productsDOM = document.querySelector('.todays-picks__nft-card')
+// const cartItems = document.querySelector('.cart-items-badge')
+// const cartTotal = document.querySelector('#total-price__price')
 
-let cart = []
+// let cart = []
 
-// Get product data from product.json
-class Product {
-  async getProduct() {
-    try {
-      const result = await fetch('products.json')
-      const data = await result.json()
+// // Get product data from product.json
+// class Product {
+//   async getProduct() {
+//     try {
+//       const result = await fetch('products.json')
+//       const data = await result.json()
       
-      let products = data.items
+//       let products = data.items
 
-      // Extract data
-      products = products.map((item) => {
-        const { title, price, creator } = item.fields
-        const { id } = item.sys
-        const image = item.fields.image.fields.file.url
-        const profile = item.fields.profile.fields.file.url
-        return { title, price, creator, id, image, profile }
-      })
+//       // Extract data
+//       products = products.map((item) => {
+//         const { title, price, creator } = item.fields
+//         const { id } = item.sys
+//         const image = item.fields.image.fields.file.url
+//         const profile = item.fields.profile.fields.file.url
+//         return { title, price, creator, id, image, profile }
+//       })
 
-      return products
-    } catch(err) {
-      console.log('Error')
-    }
-  }
-}
+//       return products
+//     } catch(err) {
+//       console.log('Error')
+//     }
+//   }
+// }
 
-// Present data in DOM
-class View {
-  // Show product data in DOM
-  displayProducts(products) {
-    let result = ''
-    products.forEach((item) => {
-      result += `
-      <div class="nft-card">
-      <div class="nft-card__image">
-        <div class="image-box">
-          <img src=${item.image} loading="lazy" alt=${item.title} title=${item.title}/>
+// // Present data in DOM
+// class View {
+//   // Show product data in DOM
+//   displayProducts(products) {
+//     let result = ''
+//     products.forEach((item) => {
+//       result += `
+//       <div class="nft-card">
+//       <div class="nft-card__image">
+//         <div class="image-box">
+//           <img src=${item.image} loading="lazy" alt=${item.title} title=${item.title}/>
           
-          <button class="place-bid cart-btn btn-l-buy" data-id=${item.id}>
-            <i class="fa-solid fa-bag-shopping"></i>
+//           <button class="place-bid cart-btn btn-l-buy" data-id=${item.id}>
+//             <i class="fa-solid fa-bag-shopping"></i>
 
-            <span class="place-bid__text">Add to cart</span>
-          </button>
+//             <span class="place-bid__text">Add to cart</span>
+//           </button>
   
-          <button class="likes" data-id=${item.id}>
-            <i class="fa-solid fa-heart"></i>
-            100
-          </button>
-        </div>
-      </div>
+//           <button class="likes" data-id=${item.id}>
+//             <i class="fa-solid fa-heart"></i>
+//             100
+//           </button>
+//         </div>
+//       </div>
 
-      <h4>${item.title}</h4>
+//       <h4>${item.title}</h4>
 
-      <div class="nft-card__profile">
-        <div class="profile__info">
-          <a href="#" class="profile-image-box-s">
-            <img src=${item.profile} loading="lazy" loading="lazy" alt="Profile Photo" title="Profile">
-          </a>
+//       <div class="nft-card__profile">
+//         <div class="profile__info">
+//           <a href="#" class="profile-image-box-s">
+//             <img src=${item.profile} loading="lazy" loading="lazy" alt="Profile Photo" title="Profile">
+//           </a>
           
-          <div class="info">
-            <span class="info__role">Creator</span>
-            <a href="#" class="info__name">${item.creator}</a>
-          </div>
-        </div>
+//           <div class="info">
+//             <span class="info__role">Creator</span>
+//             <a href="#" class="info__name">${item.creator}</a>
+//           </div>
+//         </div>
 
-        <span class="badge-blue">BSC</span>
-      </div>
+//         <span class="badge-blue">BSC</span>
+//       </div>
 
-      <hr/>
+//       <hr/>
 
-      <div class="last-container">
-        <div class="nft-card__price">
-          <span class="price-header">Current Bid</span>
-          <div class="price">
-            <span class="price__eth">${item.price} ETH</span>
-            <span class="price__fiat">= $12.246</span>
-          </div>
-        </div>
+//       <div class="last-container">
+//         <div class="nft-card__price">
+//           <span class="price-header">Current Bid</span>
+//           <div class="price">
+//             <span class="price__eth">${item.price} ETH</span>
+//             <span class="price__fiat">= $12.246</span>
+//           </div>
+//         </div>
 
-        <span class="view-history">
-          <i class="fa-solid fa-clock-rotate-left"></i>
-          View History
-        </span>
-      </div>
-    </div>
-      `
-    })
+//         <span class="view-history">
+//           <i class="fa-solid fa-clock-rotate-left"></i>
+//           View History
+//         </span>
+//       </div>
+//     </div>
+//       `
+//     })
 
-    productsDOM.innerHTML = result
-  }
+//     productsDOM.innerHTML = result
+//   }
 
-  // Add to cart buttons(Place bid)
-  getCartButtons() {
-    const buttons = [...document.querySelectorAll('.cart-btn')]
+//   // Add to cart buttons(Place bid)
+//   getCartButtons() {
+//     const buttons = [...document.querySelectorAll('.cart-btn')]
 
-    buttons.forEach((item) => {
-      let id = item.dataset.id
+//     buttons.forEach((item) => {
+//       let id = item.dataset.id
 
-      item.addEventListener('click', (e) =>{
-        let cartItem = { ...Storage.getProducts(id), amount: 1 }
+//       item.addEventListener('click', (e) =>{
+//         let cartItem = { ...Storage.getProducts(id), amount: 1 }
 
-        cart = [...cart, cartItem]
-        console.log(cart)
-        Storage.saveCart(cart)
+//         cart = [...cart, cartItem]
+//         console.log(cart)
+//         Storage.saveCart(cart)
 
-        this.setCartVlues(cart)
-      })
-    })
-  }
+//         this.setCartVlues(cart)
+//       })
+//     })
+//   }
 
-  // Set cart values
-  setCartVlues(cart) {
-    let totalPrice = 0
-    let totalItems = 0
+//   // Set cart values
+//   setCartVlues(cart) {
+//     let totalPrice = 0
+//     let totalItems = 0
 
-    cart.map((item) => {
-      totalPrice = totalPrice + item.price * item.amount
-      totalItems = totalItems + item.amount
-    })
+//     cart.map((item) => {
+//       totalPrice = totalPrice + item.price * item.amount
+//       totalItems = totalItems + item.amount
+//     })
 
-    cartTotal.innerHTML = totalPrice
-    cartItems.innerHTML = totalItems
+//     cartTotal.innerHTML = totalPrice
+//     cartItems.innerHTML = totalItems
 
-    console.log(cartTotal, cartItems)
-  }
-}
+//     console.log(cartTotal, cartItems)
+//   }
+// }
 
-// Data storage management 
-class Storage {
-  // Save products in localStorage
-  static saveProducts(products) {
-    localStorage.setItem('products', JSON.stringify(products))
-  }
+// // Data storage management 
+// class Storage {
+//   // Save products in localStorage
+//   static saveProducts(products) {
+//     localStorage.setItem('products', JSON.stringify(products))
+//   }
   
-  // Find product in localStorage
-  static getProducts(id) {
-    let products = JSON.parse(localStorage.getItem('products'))
+//   // Find product in localStorage
+//   static getProducts(id) {
+//     let products = JSON.parse(localStorage.getItem('products'))
 
-    return products.find(item => item.id === id)
-  }
+//     return products.find(item => item.id === id)
+//   }
 
-  // Save cart data in localStorage
-  static saveCart(cart) {
-    localStorage.setItem('cart', JSON.stringify(cart))
-  }
-}
+//   // Save cart data in localStorage
+//   static saveCart(cart) {
+//     localStorage.setItem('cart', JSON.stringify(cart))
+//   }
+// }
 
 // Create object when document loaded
 document.addEventListener('DOMContentLoaded', () => {
