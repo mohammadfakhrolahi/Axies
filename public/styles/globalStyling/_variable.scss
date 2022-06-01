@@ -1,0 +1,203 @@
+@mixin flex-jc-ic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-js-ic {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flex-js-is {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+
+@mixin flex-jb-ic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-jb-is {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@mixin flex-ja-ic {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flex-jb-cs {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
+@mixin flex-wrap-je-ic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+
+// ----- Column -----
+@mixin column-jc-ic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin column-jc-ie{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+@mixin column-jc{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // align-content: center;
+}
+
+@mixin column-js-is {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+@mixin column-js-cs-is {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+// @mixin column-js-ic {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   // align-items: flex-start;
+//   align-content: center;
+// }
+
+// ----- CSS Grid -----
+@mixin grid {
+  display: grid;
+}
+
+// Transform
+@mixin transform-y {
+  &:hover {
+    transform: translateY(-2rem);
+    transition: 0.4s;
+  }
+}
+
+@mixin transform-x {
+  &:hover {
+    transform: translateX(-2rem);
+    transition: 0.2s;
+  }
+}
+
+// Transform Back
+@mixin transform-back {
+  transform: translateY(0);
+  transition: 0.4s;
+}
+
+@mixin transform-3d {
+  transform: scale3d(1.03, 1.03, 0.3);
+}
+
+// Hover 
+@mixin hover-link {
+  &:hover {
+    color: $orchid;
+  }
+}
+
+// ----- Animation -----
+@mixin object-animation-1 {
+  position: relative;
+  animation: example 2s infinite linear;
+
+  @keyframes example {
+    0% {
+      right: 24.4rem;
+      top: 10rem;
+    }
+    50% {
+      right: 26rem;
+      top: 10rem;
+    }
+    51% {
+      right: 26rem;
+      top: 10rem;
+    }
+    100% {
+      right: 24.4rem;
+      top: 10rem;
+    }
+  }
+}
+
+@mixin object-animation-2 {
+  position: relative;
+  animation: example 10s infinite linear;
+
+  @keyframes example {
+    0% {
+      right: 50rem;
+      top: 20rem;
+    }
+    50% {
+      right: 70rem;
+      top: 15rem;
+    }
+    51% {
+      right: 70rem;
+      top: 15rem;
+    }
+    100% {
+      right: 50rem;
+      top: 20rem;
+    }
+  }
+}
+
+@mixin to-down-animation {
+  animation: to-down-animation 0.09s ease-in 1;
+
+  @keyframes to-down-animation {
+    0%{
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+}
+
+@mixin to-up-animation {
+  animation: to-up-animation 0.09s ease-in 1;
+
+  @keyframes to-up-animation {
+    0%{
+      opacity: 0;
+      transform: translateY(0);
+    }
+  }
+}

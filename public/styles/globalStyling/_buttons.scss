@@ -1,0 +1,253 @@
+// ----- Buttons -----
+
+button {
+  box-sizing: border-box;
+}
+
+.likes {
+  background: var(--secondary-bg);
+  color: var(--primary-text);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.7rem;
+  font: {
+    size: $font-12;
+    weight: $weight-700;
+  }
+  transition: 0.2s;
+
+  &:hover {
+    background: var(--primary-text);
+    color: var(--secondary-bg);
+  }
+}
+
+.btn-blue-m {
+  background: var(--primary-blue);
+  color: var(--background);
+  padding: 0.7rem 2rem;
+  border-radius: 3rem;
+  font-size: $font-14;
+  text-align: center;
+  transition: 0.2s;
+
+  // i {
+  //   margin: 0 1rem 0 1.4rem;
+  // }
+
+  &:hover {
+    color: var(--background);
+    box-shadow: 0 0 0 0.2rem var(--primary-text);
+  }
+
+  &:active {
+    box-shadow: 0 0 0 0.2rem var(--primary-purple);
+  }
+}
+
+.btn-b-m {
+  background: transparent;
+  color: var(--primary-text);
+  padding: 0.7rem 1.4rem 0.7rem 0;
+  box-shadow: 0 0 0 0.2rem $gray2;
+  border-radius: 3rem;
+  font-size: $font-14;
+  text-align: center;
+  transition: 0.2s;
+
+  i {
+    margin: 0 1rem 0 1.4rem;
+  }
+
+  &:hover {
+    color: var(--primary-text);
+    box-shadow: 0 0 0 0.2rem var(--primary-text);
+  }
+
+  &:active {
+    box-shadow: 0 0 0 0.2rem var(--primary-purple);
+  }
+}
+
+.btn-primary-b-m {
+  background: transparent;
+  color: var(--primary-text);
+  padding: 0.7rem 4rem;
+  border: 0.2rem solid var(--primary-text);
+  border-radius: 3rem;
+  font-size: $font-14;
+  text-align: center;
+  transition: 0.2s;
+
+  i {
+    margin: 0 1rem 0 1.4rem;
+  }
+
+  &:hover {
+    color: var(--primary-text);
+    border: 0.2rem solid var(--primary-purple);
+  }
+
+  &:active {
+    border: 0.2rem solid $blue1;
+  }
+}
+
+.btn-b-l {
+  background: transparent;
+  color: var(--primary-text);
+  padding: 1.5rem 3.8rem;
+  box-shadow: 0 0 0 0.2rem var(--primary-text);
+  border-radius: 3rem;
+  font: {
+    size: $font-14;
+    weight: $weight-700;
+  }
+  transition: 0.2s;
+
+  i {
+    margin: 0 1rem 0 1.4rem;
+  }
+
+  &:hover {
+    color: var(--primary-text);
+    box-shadow: 0 0 0 0.2rem var(--primary-purple);
+  }
+
+  &:active {
+    box-shadow: 0 0 0 0.2rem $blue1;
+  }
+}
+
+.btn-xs {
+  width: 0.8rem;
+  height: 0.8rem;
+  @include flex-jc-ic();
+  padding: 1rem;
+  color: var(--primary-text);
+  border-radius: 50%;
+  transition: 0.2s;
+
+  &:hover {
+    box-shadow: 0 0 0 0.2rem var(--primary-text);
+  }
+}
+
+.btn-s-2 {
+  background: var(--primary-bg);
+  color: var(--primary-text);
+  padding: 0.8rem 1.1rem;
+  border-radius: 3rem;
+  transition: 0.2s;
+  font: {
+    size: $font-12;
+    weight: $weight-700;
+  }
+
+  i {
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    background: var(--primary-purple);
+    color: var(--background);
+  }
+}
+
+.btn-s-3 {
+  width: 3rem;
+  height: 3rem;
+  @include flex-jc-ic();
+  background: var(--primary-bg);
+  color: var(--primary-text);
+  // padding: 0.8rem 0.9rem;
+  border-radius: 50%;
+  transition: 0.2s;
+  font: {
+    size: $font-12;
+    weight: $weight-700;
+  }
+
+  &:hover {
+    background: var(--primary-purple);
+    color: var(--background);
+  }
+}
+
+.btn-s {
+  background: red;
+  color: var(--background);
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  font-size: $font-m;
+  transition: 0.2s;
+
+  i {
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    background: var(--main-red-dark);
+  }
+}
+
+.btn-l {
+  @include flex-jc-ic();
+  color: var(--primary-text);
+  padding: 1.4rem 3.6rem;
+  box-shadow: 0 0 0 0.2rem $blue1;
+  border-radius: 3rem;
+  font-size: $font-14;
+
+  i {
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    @include animation-gradient-bg();
+    color: var(--background);
+    box-shadow: 0 0 0 0.2rem $white00;
+    // box-shadow: 0 0 0 0.7rem var(--primary-blue-t);
+  }
+
+  &:active {
+    box-shadow: 0 0 0 0.2rem $white;
+  }
+}
+
+.btn-l-buy {
+  background: var(--background);
+  color: var(--black); 
+  padding: 1.1rem 2.1rem;
+  border-radius: 2.5rem;
+  font: {
+    size: $font-14;
+    weight: $weight-500;
+  }
+  transition: 0.2s;
+
+  i {
+    color: var(--primary-purple);
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 0.7rem var(--primary-purple-t);
+  }
+
+  &:active {
+    box-shadow: 0 0 0 1.1rem var(--primary-purple-t);
+  }
+}
+
+.timer {
+  @include flex-jc-ic();
+  background: $black3;
+  color:var(--primary-text);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+
+  i {
+    color: $orchid;
+    margin-right: 1rem;
+  }
+}

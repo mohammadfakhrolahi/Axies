@@ -1,0 +1,62 @@
+// Font Size
+$font-12: 1.2rem;
+$font-s: 1.2rem;
+$font-13: 1.3rem;
+$font-14: 1.4rem;
+$font-15: 1.5rem;
+$font-m: 1.4rem;
+$font-l: 1.6rem;
+$font-16: 1.6rem;
+$font-18: 1.8rem;
+$font-xl: 1.9rem;
+$font-21: 2.1rem;
+$font-22: 2.2rem;
+$font-2xl: 3rem;
+$font-33: 3.3rem;
+$font-4xl: 5.4rem;
+
+// ----- Font Weight -----
+$weight-500: 500;
+$weight-600: 600;
+$weight-700: 700;
+
+// Text Font Size
+@mixin paragraph-xs {
+  font-size: $font-13;
+}
+
+@mixin paragraph-s {
+  font: {
+    size: $font-21;
+    weight: $weight-700;
+  }
+}
+
+@mixin text-12-gray {
+  color: var(--secondary-text);
+  font-size: $font-12;
+}
+
+@mixin text-13-gray {
+  color:var(--secondary-text);
+  font: {
+    size: $font-13;
+    weight: $weight-700;
+  }
+}
+
+@mixin text-16-white {
+  color: var(--primary-text);
+  font: {
+    size: $font-16;
+    weight: $weight-700;
+  }
+}
+
+@mixin text-18-white {
+  color: var(--primary-text);
+  font: {
+    size: $font-18;
+    weight: $weight-700;
+  }
+}

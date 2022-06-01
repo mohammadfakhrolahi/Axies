@@ -1,0 +1,210 @@
+// Import Files
+@import '../../styles/globalStyling/layout';
+// @import '../../styles/globalStyling/variable';
+
+#item-details-section {
+  padding: 5.2rem 4rem;
+  margin-top: 8.8vh;
+
+  // Place bid Button
+  .btn-l {
+    width: 100%;
+    padding: 1.5rem 0;
+    @include flex-jc-ic();
+    margin-top: 3rem;
+  }
+}
+
+.item-details-container {
+  @include flex-ja-ic();
+}
+
+// ----- Image container -----
+.item-details-image-box {
+  width: 40%;
+  height: 100vh;
+  
+  img {
+    width: 55rem;
+    @include column-js-cs-is();
+    border-radius: 1rem;
+  }
+}
+
+// ----- Details Container -----
+.item-details {
+  width: 40%;
+  height: 100vh;
+  @include column-js-cs-is();
+}
+
+// ----- Title -----
+.item-details__header {
+  color: var(--primary-text);
+  font: {
+    size: $font-33;
+    weight: $weight-600;
+  }
+}
+
+// ----- Buttons -----
+.item-details__buttons {
+  width: 100%;
+  @include flex-jb-ic();
+  margin-top: 3rem;
+  
+  div span, button:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.buttons__last-section {
+  @include flex-jb-ic();
+}
+
+// ----- About Owner and Creator -----
+.about-owner-creator {
+  margin-top: 2rem;
+
+  .profile-card-s, .box-xs {
+    width: 50%;
+  }
+}
+
+// Profil cards
+.owner-creator__profiles {
+  @include flex-js-ic();
+
+  .profile-card-s:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+// ----- Item Details Paragraph -----
+.item-details__paragraph {
+  color: var(--secondary-text);
+  margin-top: 2rem;
+}
+
+// ----- Bid Details -----
+.bid-details {
+  @include flex-jb-ic();
+  margin-top: 2rem;
+
+  .nft-card__price {
+  @include flex-jb-ic();
+  }
+
+  .nft-card__price:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+// ----- Pages Lists -----
+.pages-lists {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+//Header
+.pages-lists__header {
+  width: 100%;
+  @include flex-js-ic ();
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid var(--shadow);
+
+  // Items
+  .header__item {
+    position: relative;
+    color: var(--primary-text);
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0.2rem;
+      top: 100%;
+      left: 0;
+      margin-top: 1rem;
+      background: var(--primary-text);
+      border-radius: 0.2rem;
+      visibility: hidden;
+    }
+    font: {
+      size: $font-14;
+      weight: $weight-500;
+    }
+  }
+
+  .header__item:not(:last-child) {
+    margin-right: 5rem;
+  }
+}
+
+// ----- Pages Lists -----
+.pages-lists__items {
+  height: 22rem;
+  @include column-js-cs-is();
+  overflow-y: auto;
+
+  // lists Item
+  .pages-lists__item {
+    width: 100%;
+    @include flex-jb-ic();
+    padding: 1rem 1.5rem 1rem 0;
+
+    // First section
+    .place-bid-profile-card__first-section {
+      @include flex-js-ic();
+
+      // Profile Image
+      .profile-image-box-xs {
+        position: relative;
+
+        .verfied-icon-s {
+          position: absolute;
+          bottom: -0.2rem;
+          right: -0.2rem;
+        }
+      }
+
+      // Details Bid
+      .details__bid {
+        @include column-js-cs-is();
+        margin-left: 1rem;
+
+        .details__bid__info {
+
+          // Name
+          .details__bid__info__name {
+            color: var(--primary-text);
+            font: {
+              size: $font-14;
+              weight: $weight-500;
+            }
+          }
+          // Place bid
+          .details__bid-place-bid {
+            @include text-12-gray();
+          }
+        }
+
+        // Bid Time
+        .bid-time {
+          @include text-12-gray();
+        }
+      }
+    }
+
+    // Prcie
+    .price {
+      @include column-js-cs-is();
+    }
+  }
+  // Item border
+  .pages-lists__item:not(:last-child) {
+    border-bottom: 0.1rem solid var(--shadow);
+  }
+}

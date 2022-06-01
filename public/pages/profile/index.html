@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome Icons -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+<link rel="stylesheet" href="./profile.css" />
+<link rel="stylesheet" href="./item-details.css" />
+<link rel="stylesheet" href="../../styles/shared/header.css" />
+<link rel="stylesheet" href="../../styles/shared/footer.css" />
+<link rel="icon" href="../../images/01_header/favicon.png" />
+  <title>Profile</title>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="header__section1">
+      <a href="/index.html" class="logo">
+        <i class="fa-solid fa-fire-flame-curved"></i> Axies
+      </a>
+  
+      <!-- <nav class="mega-menu-container">
+        <ul class="mega-menu__main-list">
+
+          <li class="mega-menu__main-list__item">
+            <a href="#">
+              Home<i class="arrow down"></i>
+            </a>
+
+            <div class="mm-dropdown">
+              <ul class="mega-menu__secondary-list">
+                <li class="mega-menu__secondary-list__item">
+                  <a href="#">item</a>
+                </li>
+    
+                <li class="mega-menu__secondary-list__item">
+                  <a href="#">item</a>
+                </li>
+              </ul>
+            </div>
+
+          </li>
+
+          <li class="mega-menu__main-list__item">Explore<i class="arrow down"></i></li>
+          <li class="mega-menu__main-list__item">Activity<i class="arrow down"></i></li>
+          <li class="mega-menu__main-list__item">Community<i class="arrow down"></i></li>
+          <li class="mega-menu__main-list__item">Pages<i class="arrow down"></i></li>
+          <li class="mega-menu__main-list__item">Contact<i class="arrow down"></i></li>
+        </ul>
+      </nav> -->
+
+      <!-- <a href="#" class="icon-box-s" id="mega-menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </a> -->
+
+    <!-- <nav id="mega-menu-container">
+      <ul class="mega-menu__main-list">
+
+        <li class="mega-menu__main-list__item">
+          <a href="#">
+            Home<i class="arrow down"></i>
+          </a>
+
+          <ul class="mega-menu__secondary-list">
+            <li class="mega-menu__secondary-list__item">
+              <a href="#">item</a>
+            </li>
+
+            <li class="mega-menu__secondary-list__item">
+              <a href="#">item</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav> -->
+    </div>
+
+    <div class="header__section2">
+      <div id="header-btn-container">
+        <button class="icon-s icon-box-s" id="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        
+        <button class="icon-s icon-box-s" id="cart-btn-open" onclick="openNav()">
+          <i class="fa-solid fa-bag-shopping "></i>
+          <span class="badge-number cart-items-badge">0</span>
+        </button>
+      </div>
+  
+      <div id="wallet-connect-container">
+        <!-- <button class="btn-l" id="wallet-connect"><i class="fa-solid fa-wallet"></i> Wallet Connect</button> -->
+      </div>
+
+      <div class="theme-mode">
+        <button class="icon-box-s" onclick="themeToggle()">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+
+        <button class="icon-box-s" id="signin-modal__btn">
+          <img src="../../images/04_Top-seller/avt-1.jpg" alt="Profile" title="Profile">
+        </button>
+      </div>
+    </div>
+    
+    <div id="search-box-container">
+      <form id="search-box">
+        <input id="search-box__input" type="text" placeholder="Search...">
+
+        <button class="icon-s" id="search-box__btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
+
+    <div id="overlay"></div>
+
+    <div id="cart-menu">
+      <div id="cart-menu__main-section">
+        <button class="btn-xs" id="cart-btn-close">
+          <i class="fa-solid fa-2x fa-xmark"></i>
+        </button>
+  
+        <h2 id="card-menu__header">My Cart</h2>
+  
+        <div class="cart-items">
+          <div class="cart-item">
+            <div class="cart-item__img-details">
+              <div class="profile-image-box-s">
+                <img src="../../images/05_Today's Picks/card-item-2.jpg" alt="NFT Image" title="NFT Image">
+              </div>
+    
+              <div class="cart-item__details">
+                <span class="nft-name">Name</span>
+                
+                <span class="nft-price">10 ETH</span>
+              </div>
+            </div>
+  
+            <div class="cart-item__last-section">
+              <span class="badge-number">2</span>
+  
+              <button class="remove-nft btn-s">Remove</button>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+      
+      <div id="total-price">
+        <span class="total-price__price" id="total-price__price">Total: </span> &nbsp; &nbsp;
+        <span class="total-price__price">0 ETH</span>
+      </div>
+    </div>
+
+    <div id="signin-modal">
+      <div id="signin-modal__header">
+        <div id="signin-modal__content">
+          <div id="signin-modal__logo">
+            <img src="../../images/01_header/favicon.png" alt="Logo" title="Logo">
+          </div>
+  
+          <span>Sign in to Axies</span>
+        </div>
+
+        <button id="signin-modal__close-btn" class="btn-xs">
+          <i class="fa-solid fa-2x fa-xmark"></i>
+        </button>
+      </div>
+
+      <div id="button-container">
+        <a href="../sign-in/index.html" class="btn-b-m" id="signin-modal__signin">Sign In</a>
+  
+        <a href="#" class="btn-b-m" id="signin-modal__signup">Create Account</a>
+      </div>
+
+    </div>
+  </header>
+  
+  <main>
+    <section class="main-section section-shared">
+
+      <div class="profile-photo-container">
+        <div class="image-box">
+          <img src="../../images/04_Top-seller/avt-1.jpg" loading="lazy" alt="Profile photo" title="Profile photo">
+        </div>
+
+        <div class="profile-photo__btn">
+          <button class="btn-primary-b-m">Upload New Photo</button>
+          <button class="btn-primary-b-m">Delete</button>
+        </div>
+      </div>
+
+      <div id="profile-second-section">
+
+        <div id="choice-cover">
+          <h3>Choice your cover image</h3>
+
+          <div id="choice-cover__choose-image">
+            <!-- <div class="choose-image image-box-m">
+              <button class="btn-primary-b-m">Upload</button>
+            </div> -->
+            
+            <form action="/target" class="dropzone choose-image image-box-m"  id="my-awesome-dropzone my-dropzone">
+              <input type="file" name="file"  class="dropzone-input"/>
+
+              <div class="dz-preview dz-file-preview">
+                <div class="dz-details">
+                  <div class="dz-filename"><span data-dz-name></span></div>
+                  <div class="dz-size" data-dz-size></div>
+                  <img data-dz-thumbnail />
+                </div>
+                <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
+                <div class="dz-success-mark"><span>✔</span></div>
+                <div class="dz-error-mark"><span>✘</span></div>
+                <div class="dz-error-message"><span data-dz-errormessage></span></div>
+              </div>
+            </form>
+  
+            <div type="radio" name="choose-image " class="choose-image image-box-m">
+              <img src="../../images/cover/cover-1.jpg" alt="">
+            </div>
+          
+            <div type="radio" name="choose-image" class="choose-image image-box-m">
+              <img src="../../images/cover/cover-1.jpg" alt="">
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="forms" id="account-info">
+          <h3>Account info</h3>
+
+          <form class="form">
+            <div class="form-divider">
+              <label for="name" class="label">Display name</label>
+              <input type="text" class="input" placeholder="Your name">
+            </div>
+
+            <div class="form-divider">
+              <label for="name" class="label">Custom URL</label>
+              <input type="text" class="input" placeholder="Axies.example.com/">
+            </div>
+
+            <div class="form-divider">
+              <label for="name" class="label">Email</label>
+              <input type="text" class="input" placeholder="Enter your email">
+            </div>
+
+            <div class="form-divider">
+              <label for="name" class="label">Email</label>
+              <textarea name="" class="input textarea" id="" cols="30" rows="6"></textarea>
+            </div>
+          </form>
+        </div>
+
+        <div class="forms" id="your-social-media">
+          <h3>Your social media</h3>
+
+          <form class="form">
+            <div class="form-divider">
+              <label for="name" class="label">Facebook</label>
+              <input type="text" class="input" placeholder="Facebook username">
+              <button class="btn-blue-m">
+                <i class="fa-brands fa-facebook-f"></i>&nbsp; Connect to Facebook
+              </button>
+            </div>
+
+            <div class="form-divider">
+              <label for="name" class="label">Twitter</label>
+              <input type="text" class="input" placeholder="Twitter username">
+              <button class="btn-blue-m">
+                <i class="fa-brands fa-twitter"></i>&nbsp; Connect to Twitter
+              </button>
+            </div>
+
+            <div class="form-divider">
+              <label for="name" class="label">Discord</label>
+              <input type="text" class="input" placeholder="Discord username">
+              <button class="btn-blue-m">
+                <i class="fa-brands fa-discord"></i>&nbsp; Connect to Discord
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <button class="btn-primary-b-m">Update Profile</button>
+        
+      </div>
+      
+    </section>
+
+  </main>
+
+  <footer id="main-footer">
+    <div id="footer-informations">
+      <a href="/index.html" class="logo">
+        <i class="fa-solid fa-fire-flame-curved"></i>
+         Axies
+      </a>
+
+      <p id="footer__information">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Nunc non adipiscing consectetur phasellus nunc nunc vel. 
+      </p>
+    </div>
+
+    <nav id="footer-nav">
+      <div class="footer-nav__list">
+        <h3 class="footer-nav__header">My Account</h3>
+
+        <ul class="list__items">
+          <li class="list__item">
+            <a href="#">Authors</a> 
+          </li>
+
+          <li class="list__item">
+            <a href="#">Collection</a> 
+          </li>
+
+          <li class="list__item">
+            <a href="#">Author Profile</a> 
+          </li>
+          
+          <li class="list__item">
+            <a href="#">Create Item</a> 
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-nav__list">
+        <h3 class="footer-nav__header">Resources</h3>
+
+        <ul class="list__items">
+          <li class="list__item">
+            <a href="#">Help & Support</a> 
+          </li>
+
+          <li class="list__item">
+            <a href="#">Live Auctions</a> 
+          </li>
+
+          <li class="list__item">
+            <a href="#">Item Details</a> 
+          </li>
+
+          <li class="list__item">
+            <a href="#">Activity</a> 
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-nav__list">
+        <h3 class="footer-nav__header">Company</h3>
+
+        <ul class="list__items">
+          <li class="list__item">
+            <a href="#">Explore</a> 
+          </li>
+
+          <li class="list__item">
+            <a href="#">Contact Us</a> 
+          </li>
+
+          <li class="list__item">
+            <a href="#">Our Blog</a> 
+          </li>
+
+          <li class="list__item">
+            <a href="#">Our Blog</a> 
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="contact-us">
+      <h3 class="subscribe">Subscribe Us</h3>
+
+      <form id="subscribe" class="input-form">
+        <input type="text" class="input" placeholder="info@youremail.com">
+        <button class="input-form__btn" type="submit">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+
+      <div class="social-links">
+          <a href="https://twitter.com/mohammadfMe" class="social-icon-box" target="_blanck" title="Twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+
+          <a href="https://www.facebook.com/" class="social-icon-box" target="_blanck" title="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+          <a href="https://web.telegram.org/z/" class="social-icon-box" target="_blanck" title="Telegram">
+            <i class="fa-solid fa-paper-plane"></i>
+          </a>
+
+          <a href="https://www.youtube.com/" class="social-icon-box" target="_blanck" title="Youtube">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a href="https://www.instagram.com/" class="social-icon-box" target="_blanck" title="Linkdin">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="https://discord.com/" class="social-icon-box" target="_blanck" title="Discord">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+  <script src="../../../src/index.js"></script>
+</body>
+</html>

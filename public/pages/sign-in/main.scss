@@ -1,0 +1,116 @@
+// Import Files
+@import '../../styles/globalStyling/layout';
+
+main {
+  height: 100vh;
+  @include flex-jc-ic();
+  // padding: 2rem 8rem;
+}
+
+#main-signin {
+  width: 100%;
+  height: 100%;
+  @include flex-js-ic();
+  background: url('../../images/login-3.jpg') center/cover no-repeat;
+}
+
+#background {
+  width: 100%;
+  height: 100%;
+  background: var(--primary-gradiant-bg);
+  background: var(--primary-gradiant);
+  transition: 0.2s;
+}
+
+#signin-section {
+  width: 20%;
+  height: 100%;
+  @include column-jc-ic();
+  margin-left: 12rem;
+}
+
+// Header
+#signin__header {
+  color: var(--primary-text);
+  font: {
+    size: $font-33;
+    weight: $weight-500;
+  }
+}
+
+// Input
+.input:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+// Submit
+#signin-button {
+  margin-top: 4rem;
+}
+
+// Create account text
+#text-container {
+  @include flex-js-ic();
+  margin-top: 4rem;
+  font-size: $font-14;
+
+  span {
+    color: var(--secondary-text);
+  }
+
+  a {
+    color: var(--orchid);
+  }
+}
+
+// Or Divider
+#or-div {
+  @include flex-jc-ic();
+  color: var(--secondary-text);
+
+  .divider {
+    width: 10rem;
+    height: 0.05rem;
+    background: var(--secondary-text);
+    // margin: 1.6rem 0;
+    border: none;
+  }
+
+  span {
+    margin: 4rem 1rem;
+  }
+}
+
+// Sign in with other account
+.other-account {
+  @include flex-jc-ic();
+
+  .login-icon-box:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+#google{
+  &:hover {
+    background: var(--google);
+  }
+}
+
+#facebook{
+  &:hover {
+    background: var(--facebook);
+  }
+}
+
+#twitter{
+  &:hover {
+    background: var(--twitter);
+  }
+}
+
+#github{
+  &:hover {
+    background: var(--background);
+    color: var(--black);
+  }
+}
