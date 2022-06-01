@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* Error: expected "{".
+ *     ,
+ * 124 |   max
+ *     |      ^
+ *     '
+ *   .history\public\pages\profile\profile_20220601120809.scss 124:6  root stylesheet */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a     ╷\a 124 │   max\d\a     │      ^\a     ╵\a   .history\\public\\pages\\profile\\profile_20220601120809.scss 124:6  root stylesheet';
+}
+
+/*# sourceMappingURL=profile_20220601120809.css.map */
