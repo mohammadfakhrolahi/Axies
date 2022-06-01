@@ -715,9 +715,6 @@ hr {
   border-width: 0 0.24rem 0.24rem 0;
   padding: 0.27rem;
   border-radius: 0.2rem;
-}
-
-.down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
@@ -824,16 +821,13 @@ hr {
   border-radius: 0 0 1rem 1rem;
 }
 
-#wallet-connect-container {
-  margin: 0 8.7rem 0 3.8rem;
-}
-
 #header-btn-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 4rem;
 }
-#header-btn-container button:not(:last-child) {
+#header-btn-container button {
   margin-right: 1rem;
 }
 
@@ -899,6 +893,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 4rem;
 }
 .theme-mode button {
   margin: 0 0.65rem;
@@ -1075,6 +1070,22 @@ hr {
 #signin-modal #button-container #signin-modal__signin {
   background: var(--primary-purple);
   color: var(--background);
+}
+
+.min-anv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--primary-text);
+}
+.min-anv .nav-item {
+  cursor: pointer;
+}
+.min-anv .nav-item span {
+  margin-left: 1rem;
+}
+.min-anv .nav-item:not(:last-child) {
+  margin-right: 2rem;
 }
 
 /*# sourceMappingURL=header.css.map */

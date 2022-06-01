@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* Error: expected "{".
+ *     ,
+ * 348 |   .nav-item:not(:last-child)
+ *     |                             ^
+ *     '
+ *   .history\public\styles\shared\header_20220601113405.scss 348:29  root stylesheet */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a     ╷\a 348 │   .nav-item:not(:last-child)\d\a     │                             ^\a     ╵\a   .history\\public\\styles\\shared\\header_20220601113405.scss 348:29  root stylesheet';
+}
+
+/*# sourceMappingURL=header_20220601113405.css.map */

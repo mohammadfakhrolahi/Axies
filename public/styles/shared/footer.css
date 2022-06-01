@@ -715,9 +715,6 @@ hr {
   border-width: 0 0.24rem 0.24rem 0;
   padding: 0.27rem;
   border-radius: 0.2rem;
-}
-
-.down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
