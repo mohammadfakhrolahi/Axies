@@ -63,14 +63,12 @@
 }
 
 // Nav Header //     Subscribe
-.footer-nav__header, #subscribe {
+.footer-nav__header, .subscribe {
   @include text-16-white();
   margin-bottom: 3rem;
 }
 
-#subscribe .input {
-  border: none;
-}
+.subscribe {}
 
 // ----- Subscribe / Social -----
 .social-links {

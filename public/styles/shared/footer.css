@@ -804,11 +804,15 @@ hr {
   text-decoration: 0.2rem underlinevar(--secondary-text);
 }
 
-.footer-nav__header, .subscribe {
+.footer-nav__header, #subscribe {
   color: var(--primary-text);
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 3rem;
+}
+
+#subscribe .input {
+  border: none;
 }
 
 .social-links {
