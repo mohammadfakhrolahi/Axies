@@ -399,6 +399,16 @@ button {
   margin-right: 1rem;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-blue);
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
 .verfied-icon-s {
   width: 1.5rem;
   height: 1.5rem;

@@ -297,34 +297,49 @@ main {
   @include column-jc-ic();
   background: var(--secondary-bg);
   padding: 5.2rem 4rem;
-}
 
-// Slide - Swiper
-.nft-slide-bar {
-  // @include flex-jc-ic();
-  display: grid;
-  grid-template-columns: repeat(4, 31.5rem);
-  grid-column-gap: 2.6rem;
-}
-
-@media (max-width: 90rem) {
-  .nft-slide-bar {
-    grid-template-columns: repeat(4, 29rem);
+  .section-header {
+    margin-bottom: 2.1rem;
   }
 }
 
+// Slide - Swiper
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0;
+}
+
+// .nft-slide-bar,
+// .swiper-wrapper {
+  // @include flex-jc-ic();
+  // display: grid;
+  // grid-template-columns: repeat(4, 31.5rem);
+  // grid-column-gap: 2.6rem;
+  // text-align: center;
+  // font-size: 1.8rem;
+  // background: #fff;
+
+// }
+
+// @media (max-width: 90rem) {
+//   .nft-slide-bar {
+//     grid-template-columns: repeat(4, 29rem);
+//   }
+// }
+
 // NFT Card
-.nft-card {
-  // width: 31.5rem;
-  // height: 48.6rem;
+.nft-card,
+.swiper-slide {
+  max-width: 31.5rem;
+  // height: 480.6rem;
   background: var(--primary-bg);
   padding: 2.1rem;
-  // margin: 0 1.3rem;
   border: 2px solid transparent;
   border-radius: 2.8rem;
   transition: 0.2s;
   @include transform-back();
-  box-shadow: 0 0 3.43rem 0.62rem rgba(0, 0, 0, 0.103);
+  // box-shadow: 0 0 3.43rem 0.62rem rgba(0, 0, 0, 0.103);
 
   // Image
   .nft-card__image {
@@ -366,8 +381,6 @@ main {
       .price-header {
         @include text-12-gray();
       }
-
-      
     }
   }
   // Hover
@@ -389,8 +402,12 @@ main {
 }
 // Slider
 #slider {
+  width: 30rem;
+  height: 4.4rem;
+  @include flex-jc-ic();
+  position: relative;
   color: var(--primary-text);
-  margin-top: 3.2rem;
+  margin-top: 2.1rem;
   font-size: $font-14;
 
   i {
@@ -402,7 +419,34 @@ main {
       color: $orchid;
     }
   }
+
+  
+  @include flex-ja-ic();
+  .swiper-pagination-bullet {
+    background: var(--primary-text);
+    border-radius: 50%
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: var(--primary-blue);
+  }
+
+  // pagination
+  .swiper-pagination-container{
+    @include flex-ja-ic();
+    margin: 0 5rem
+  }
+  
+  // Next Prev
+  .swiper-button-prev-container,
+  .swiper-button-next-container {
+    // position: absolute;
+    // top: 0;
+    @include flex-ja-ic();
+  
+  }
 }
+
 
 // ----- Popular Collection -----
 // .collection-card__profile {

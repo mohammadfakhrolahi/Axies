@@ -2,6 +2,25 @@ const productsDOM = document.querySelector('.todays-picks__nft-card')
 const cartItems = document.querySelector('.cart-items-badge')
 const cartTotal = document.querySelector('#total-price__price')
 
+// Swiper
+const swiper = new Swiper(".swiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  slidesPerGroup: 1,
+  loop: false,
+  loopFillGroupWithBlank: true,
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 let cart = []
 
 // Get product data from product.json
@@ -314,3 +333,4 @@ Dropzone.options.myDropzone = {
 
 // create a Dropzone upload
 myDropzone = new Dropzone("div#myId", { url: "/file/post"})
+

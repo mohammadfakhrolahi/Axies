@@ -251,3 +251,14 @@ button {
     margin-right: 1rem;
   }
 }
+
+// Swiper arrows
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-blue);
+  
+  &:after {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+}
