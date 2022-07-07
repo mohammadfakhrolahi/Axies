@@ -395,7 +395,7 @@ button {
   border-radius: 1rem;
 }
 .timer i {
-  color: #c750e5ff;
+  color: #c750e5;
   margin-right: 1rem;
 }
 
@@ -425,7 +425,7 @@ button {
   transition: 0.2s;
 }
 .icon-box-xs:hover {
-  background: linear-gradient(0deg, #6945f7, #c750e5ff);
+  background: linear-gradient(0deg, #6945f7, #c750e5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -442,7 +442,7 @@ button {
   transition: 0.2s;
 }
 .icon-box-s i {
-  background: linear-gradient(45deg, #6945f7, #c750e5ff);
+  background: linear-gradient(45deg, #6945f7, #c750e5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -621,14 +621,14 @@ hr {
   transition: 0.2s;
 }
 .logo i {
-  background: linear-gradient(45deg, #6945f7, #c750e5ff);
+  background: linear-gradient(45deg, #6945f7, #c750e5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-right: 1rem;
   font-size: 3.5rem;
 }
 .logo:hover {
-  background: linear-gradient(45deg, #6945f7, #c750e5ff);
+  background: linear-gradient(45deg, #6945f7, #c750e5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
