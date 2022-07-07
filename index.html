@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
       crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./public/styles/main.css">
   <link rel="stylesheet" href="./public/styles/shared/header.css">
   <link rel="stylesheet" href="./public/styles/shared/footer.css">
@@ -129,13 +130,11 @@
       </div>
 
     </div>
-
     
   </header>
 
   <main>
 
-    
     <section class="hero section-shared">
       <div class="hero-content">
         <h1 class="hero__title">
@@ -237,229 +236,406 @@
 
         <a href="#" id="explore-more">EXPLORE MORE</a>
       </header>
-      <!-- NFT Cart -->
-      <div class="nft-slide-bar">
-        <div class="nft-card">
-          <div class="nft-card__image">
-            <div class="image-box">
-              <img src="./public/images/03_Live Auctions/image-box-11.jpg" loading="lazy" alt="NFT Picture" title="NFT Picture">
-              
-              <button class="place-bid btn-l-buy">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span class="place-bid__text">Place Bid</span>
+
+      <div class="swiper">
+        <div class="nft-slide-bar swiper-wrapper">
+          <!-- NFT Cart -->
+          <div class="nft-card swiper-slide">
+            <div class="nft-card__image">
+              <div class="image-box">
+                <img src="./public/images/03_Live Auctions/image-box-11.jpg" loading="lazy" alt="NFT Picture" title="NFT Picture">
                 
+                <button class="place-bid btn-l-buy">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  <span class="place-bid__text">Place Bid</span>
+                  
+                </button>
+  
+                <span class="timer">
+                  <i class="fa-solid fa-fire-flame-curved"></i>
+                  5 : 23 : 22 : 08
+                </span>
+              </div>
+            </div>
+  
+            <h4>“Hamlet Contemplates Yorick’s...</h4>
+  
+            <div class="nft-card__profile">
+              <div class="profile__info">
+                <a href="#" class="profile-image-box-s">
+                  <img src="./public/images/04_Top-Seller//avt-5.jpg" loading="lazy" loading="lazy" alt="Profile Photo" title="Profile">
+                </a>
+                
+                <div class="info">
+                  <span class="info__role">Creator</span>
+                  <a href="#" class="info__name">SalvadorDali</a>
+                </div>
+              </div>
+  
+              <span class="badge-blue">BSC</span>
+            </div>
+  
+            <hr/>
+  
+            <div class="last-container">
+              <div class="nft-card__price">
+                <span class="price-header">Current Bid</span>
+                <div class="price">
+                  <span class="price__eth">4.89 ETH</span>
+                  <span class="price__fiat">= $12.246</span>
+                </div>
+              </div>
+      
+              <button class="likes">
+                <i class="fa-solid fa-heart"></i>
+                100
               </button>
-
-              <span class="timer">
-                <i class="fa-solid fa-fire-flame-curved"></i>
-                5 : 23 : 22 : 08
-              </span>
             </div>
           </div>
-
-          <h4>“Hamlet Contemplates Yorick’s...</h4>
-
-          <div class="nft-card__profile">
-            <div class="profile__info">
-              <a href="#" class="profile-image-box-s">
-                <img src="./public/images/04_Top-Seller//avt-5.jpg" loading="lazy" loading="lazy" alt="Profile Photo" title="Profile">
-              </a>
-              
-              <div class="info">
-                <span class="info__role">Creator</span>
-                <a href="#" class="info__name">SalvadorDali</a>
+          <!-- NFT Cart -->
+          <div class="nft-card swiper-slide">
+            <div class="nft-card__image">
+              <div class="image-box">
+                <img src="./public/images/03_Live Auctions/image-box-21.jpg" loading="lazy" alt="NFT Picture" title="NFT Picture">
+                
+                <button class="place-bid btn-l-buy">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  <span class="place-bid__text">Place Bid</span>
+                </button>
+  
+                <span class="timer">
+                  <i class="fa-solid fa-fire-flame-curved"></i>
+                  5 : 23 : 22 : 08
+                </span>
               </div>
             </div>
-
-            <span class="badge-blue">BSC</span>
-          </div>
-
-          <hr/>
-
-          <div class="last-container">
-            <div class="nft-card__price">
-              <span class="price-header">Current Bid</span>
-              <div class="price">
-                <span class="price__eth">4.89 ETH</span>
-                <span class="price__fiat">= $12.246</span>
+  
+            <h4>“Hamlet Contemplates Yorick’s...</h4>
+  
+            <div class="nft-card__profile">
+              <div class="profile__info">
+                <a href="#" class="profile-image-box-s">
+                  <img src="./public/images/04_Top-Seller/avt-2.jpg" loading="lazy" alt="Profile Photo" title="Profile">
+                </a>
+                
+                <div class="info">
+                  <span class="info__role">Creator</span>
+                  <a href="#" class="info__name">SalvadorDali</a>
+                </div>
               </div>
+  
+              <span class="badge-blue">BSC</span>
             </div>
-    
-            <button class="likes">
-              <i class="fa-solid fa-heart"></i>
-              100
-            </button>
-          </div>
-        </div>
-        <!-- NFT Cart -->
-        <div class="nft-card">
-          <div class="nft-card__image">
-            <div class="image-box">
-              <img src="./public/images/03_Live Auctions/image-box-21.jpg" loading="lazy" alt="NFT Picture" title="NFT Picture">
-              
-              <button class="place-bid btn-l-buy">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span class="place-bid__text">Place Bid</span>
+  
+            <hr/>
+  
+            <div class="last-container">
+              <div class="nft-card__price">
+                <span class="price-header">Current Bid</span>
+                <div class="price">
+                  <span class="price__eth">4.89 ETH</span>
+                  <span class="price__fiat">= $12.246</span>
+                </div>
+              </div>
+      
+              <button class="likes">
+                <i class="fa-solid fa-heart"></i>
+                100
               </button>
-
-              <span class="timer">
-                <i class="fa-solid fa-fire-flame-curved"></i>
-                5 : 23 : 22 : 08
-              </span>
             </div>
           </div>
-
-          <h4>“Hamlet Contemplates Yorick’s...</h4>
-
-          <div class="nft-card__profile">
-            <div class="profile__info">
-              <a href="#" class="profile-image-box-s">
-                <img src="./public/images/04_Top-Seller/avt-2.jpg" loading="lazy" alt="Profile Photo" title="Profile">
-              </a>
-              
-              <div class="info">
-                <span class="info__role">Creator</span>
-                <a href="#" class="info__name">SalvadorDali</a>
+          <!-- NFT Cart -->
+          <div class="nft-card swiper-slide">
+            <div class="nft-card__image">
+              <div class="image-box">
+                <img src="./public/images/03_Live Auctions/card-item8.jpg" loading="lazy" alt="NFT Picture" title="NFT Picture">
+                
+                <button class="place-bid btn-l-buy">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  <span class="place-bid__text">Place Bid</span>
+                </button>
+  
+                <span class="timer">
+                  <i class="fa-solid fa-fire-flame-curved"></i>
+                  5 : 23 : 22 : 08
+                </span>
               </div>
             </div>
-
-            <span class="badge-blue">BSC</span>
-          </div>
-
-          <hr/>
-
-          <div class="last-container">
-            <div class="nft-card__price">
-              <span class="price-header">Current Bid</span>
-              <div class="price">
-                <span class="price__eth">4.89 ETH</span>
-                <span class="price__fiat">= $12.246</span>
+  
+            <h4>“Hamlet Contemplates Yorick’s...</h4>
+  
+            <div class="nft-card__profile">
+              <div class="profile__info">
+                <a href="#" class="profile-image-box-s">
+                  <img src="./public/images/04_Top-Seller/avt-1.jpg" loading="lazy" alt="Profile Photo" title="Profile">
+                </a>
+                
+                <div class="info">
+                  <span class="info__role">Creator</span>
+                  <a href="#" class="info__name">SalvadorDali</a>
+                </div>
               </div>
+  
+              <span class="badge-blue">BSC</span>
             </div>
-    
-            <button class="likes">
-              <i class="fa-solid fa-heart"></i>
-              100
-            </button>
-          </div>
-        </div>
-        <!-- NFT Cart -->
-        <div class="nft-card">
-          <div class="nft-card__image">
-            <div class="image-box">
-              <img src="./public/images/03_Live Auctions/card-item8.jpg" loading="lazy" alt="NFT Picture" title="NFT Picture">
-              
-              <button class="place-bid btn-l-buy">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span class="place-bid__text">Place Bid</span>
+  
+            <hr/>
+  
+            <div class="last-container">
+              <div class="nft-card__price">
+                <span class="price-header">Current Bid</span>
+                <div class="price">
+                  <span class="price__eth">4.89 ETH</span>
+                  <span class="price__fiat">= $12.246</span>
+                </div>
+              </div>
+      
+              <button class="likes">
+                <i class="fa-solid fa-heart"></i>
+                100
               </button>
-
-              <span class="timer">
-                <i class="fa-solid fa-fire-flame-curved"></i>
-                5 : 23 : 22 : 08
-              </span>
             </div>
           </div>
-
-          <h4>“Hamlet Contemplates Yorick’s...</h4>
-
-          <div class="nft-card__profile">
-            <div class="profile__info">
-              <a href="#" class="profile-image-box-s">
-                <img src="./public/images/04_Top-Seller/avt-1.jpg" loading="lazy" alt="Profile Photo" title="Profile">
-              </a>
-              
-              <div class="info">
-                <span class="info__role">Creator</span>
-                <a href="#" class="info__name">SalvadorDali</a>
+          <!-- NFT Cart -->
+          <div class="nft-card swiper-slide">
+            <div class="nft-card__image">
+              <div class="image-box">
+                <img src="./public/images/03_Live Auctions/image-box-10.jpg"lazy" alt="NFT Picture" title="NFT Picture">
+                
+                <button class="place-bid btn-l-buy">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  <span class="place-bid__text">Place Bid</span>
+                </button>
+  
+                <span class="timer">
+                  <i class="fa-solid fa-fire-flame-curved"></i>
+                  5 : 23 : 22 : 08
+                </span>
               </div>
             </div>
-
-            <span class="badge-blue">BSC</span>
-          </div>
-
-          <hr/>
-
-          <div class="last-container">
-            <div class="nft-card__price">
-              <span class="price-header">Current Bid</span>
-              <div class="price">
-                <span class="price__eth">4.89 ETH</span>
-                <span class="price__fiat">= $12.246</span>
+  
+            <h4>“Hamlet Contemplates Yorick’s...</h4>
+  
+            <div class="nft-card__profile">
+              <div class="profile__info">
+                <a href="#" class="profile-image-box-s">
+                  <img src="./public/images/04_Top-Seller/avt-2.jpg" loading="lazy" alt="Profile Photo" title="Profile">
+                </a>
+                
+                <div class="info">
+                  <span class="info__role">Creator</span>
+                  <a href="#" class="info__name">SalvadorDali</a>
+                </div>
               </div>
+  
+              <span class="badge-blue">BSC</span>
             </div>
-    
-            <button class="likes">
-              <i class="fa-solid fa-heart"></i>
-              100
-            </button>
-          </div>
-        </div>
-        <!-- NFT Cart -->
-        <div class="nft-card">
-          <div class="nft-card__image">
-            <div class="image-box">
-              <img src="./public/images/03_Live Auctions/image-box-10.jpg" loading="lazy" alt="NFT Picture" title="NFT Picture">
-              
-              <button class="place-bid btn-l-buy">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span class="place-bid__text">Place Bid</span>
+  
+            <hr/>
+  
+            <div class="last-container">
+              <div class="nft-card__price">
+                <span class="price-header">Current Bid</span>
+                <div class="price">
+                  <span class="price__eth">4.89 ETH</span>
+                  <span class="price__fiat">= $12.246</span>
+                </div>
+              </div>
+      
+              <button class="likes">
+                <i class="fa-solid fa-heart"></i>
+                100
               </button>
-
-              <span class="timer">
-                <i class="fa-solid fa-fire-flame-curved"></i>
-                5 : 23 : 22 : 08
-              </span>
             </div>
+            
           </div>
-
-          <h4>“Hamlet Contemplates Yorick’s...</h4>
-
-          <div class="nft-card__profile">
-            <div class="profile__info">
-              <a href="#" class="profile-image-box-s">
-                <img src="./public/images/04_Top-Seller/avt-3.jpg" loading="lazy" alt="Profile Photo" title="Profile">
-              </a>
-              
-              <div class="info">
-                <span class="info__role">Creator</span>
-                <a href="#" class="info__name">SalvadorDali</a>
+          <!-- NFT Cart -->
+          <div class="nft-card swiper-slide">
+            <div class="nft-card__image">
+              <div class="image-box">
+                <img src="./public/images/03_Live Auctions/image-box-11.jpg" loading="lazy" alt="NFT Picture" title="NFT Picture">
+                
+                <button class="place-bid btn-l-buy">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  <span class="place-bid__text">Place Bid</span>
+                </button>
+  
+                <span class="timer">
+                  <i class="fa-solid fa-fire-flame-curved"></i>
+                  5 : 23 : 22 : 08
+                </span>
               </div>
             </div>
-
-            <span class="badge-blue">BSC</span>
+  
+            <h4>“Hamlet Contemplates Yorick’s...</h4>
+  
+            <div class="nft-card__profile">
+              <div class="profile__info">
+                <a href="#" class="profile-image-box-s">
+                  <img src="./public/images/04_Top-Seller/avt-4.jpg" loading="lazy" alt="Profile Photo" title="Profile">
+                </a>
+                
+                <div class="info">
+                  <span class="info__role">Creator</span>
+                  <a href="#" class="info__name">SalvadorDali</a>
+                </div>
+              </div>
+  
+              <span class="badge-blue">BSC</span>
+            </div>
+  
+            <hr/>
+  
+            <div class="last-container">
+              <div class="nft-card__price">
+                <span class="price-header">Current Bid</span>
+                <div class="price">
+                  <span class="price__eth">4.89 ETH</span>
+                  <span class="price__fiat">= $12.246</span>
+                </div>
+              </div>
+      
+              <button class="likes">
+                <i class="fa-solid fa-heart"></i>
+                100
+              </button>
+            </div>
+            
           </div>
-
-          <hr/>
-
-          <div class="last-container">
-            <div class="nft-card__price">
-              <span class="price-header">Current Bid</span>
-              <div class="price">
-                <span class="price__eth">4.89 ETH</span>
-                <span class="price__fiat">= $12.246</span>
+          <!-- NFT Cart -->
+          <div class="nft-card swiper-slide">
+            <div class="nft-card__image">
+              <div class="image-box">
+                <img src="./public/images/03_Live Auctions/image-box-21.jpg" loading="lazy" alt="NFT Picture" title="NFT Picture">
+                
+                <button class="place-bid btn-l-buy">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  <span class="place-bid__text">Place Bid</span>
+                </button>
+  
+                <span class="timer">
+                  <i class="fa-solid fa-fire-flame-curved"></i>
+                  5 : 23 : 22 : 08
+                </span>
               </div>
             </div>
-    
-            <button class="likes">
-              <i class="fa-solid fa-heart"></i>
-              100
-            </button>
+  
+            <h4>“Hamlet Contemplates Yorick’s...</h4>
+  
+            <div class="nft-card__profile">
+              <div class="profile__info">
+                <a href="#" class="profile-image-box-s">
+                  <img src="./public/images/04_Top-Seller/avt-4.jpg" loading="lazy" alt="Profile Photo" title="Profile">
+                </a>
+                
+                <div class="info">
+                  <span class="info__role">Creator</span>
+                  <a href="#" class="info__name">SalvadorDali</a>
+                </div>
+              </div>
+  
+              <span class="badge-blue">BSC</span>
+            </div>
+  
+            <hr/>
+  
+            <div class="last-container">
+              <div class="nft-card__price">
+                <span class="price-header">Current Bid</span>
+                <div class="price">
+                  <span class="price__eth">4.89 ETH</span>
+                  <span class="price__fiat">= $12.246</span>
+                </div>
+              </div>
+      
+              <button class="likes">
+                <i class="fa-solid fa-heart"></i>
+                100
+              </button>
+            </div>
+            
+          </div>
+          <!-- NFT Cart -->
+          <div class="nft-card swiper-slide">
+            <div class="nft-card__image">
+              <div class="image-box">
+                <img src="./public/images/05_Today's Picks/card-item-9.jpg" loading="lazy" alt="NFT Picture" title="NFT Picture">
+                
+                <button class="place-bid btn-l-buy">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  <span class="place-bid__text">Place Bid</span>
+                </button>
+  
+                <span class="timer">
+                  <i class="fa-solid fa-fire-flame-curved"></i>
+                  5 : 23 : 22 : 08
+                </span>
+              </div>
+            </div>
+  
+            <h4>“Hamlet Contemplates Yorick’s...</h4>
+  
+            <div class="nft-card__profile">
+              <div class="profile__info">
+                <a href="#" class="profile-image-box-s">
+                  <img src="./public/images/04_Top-Seller/avt-5.jpg" loading="lazy" alt="Profile Photo" title="Profile">
+                </a>
+                
+                <div class="info">
+                  <span class="info__role">Creator</span>
+                  <a href="#" class="info__name">SalvadorDali</a>
+                </div>
+              </div>
+  
+              <span class="badge-blue">BSC</span>
+            </div>
+  
+            <hr/>
+  
+            <div class="last-container">
+              <div class="nft-card__price">
+                <span class="price-header">Current Bid</span>
+                <div class="price">
+                  <span class="price__eth">4.89 ETH</span>
+                  <span class="price__fiat">= $12.246</span>
+                </div>
+              </div>
+      
+              <button class="likes">
+                <i class="fa-solid fa-heart"></i>
+                100
+              </button>
+            </div>
+            
           </div>
           
         </div>
-        
+
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div> -->
       </div>
       
       <div id="slider">
-        <i class="fa-solid fa-arrow-left"></i>
+        <div class="swiper-button-prev-container">
+          <div class="swiper-button-prev swiper-button-prev--btn"></div>
+        </div>
+        
+        <div class="swiper-pagination-container">
+          <div class="swiper-pagination swiper-pagination--circle"></div>
+        </div>
+
+        <div class="-container">
+          <div class="swiper-button-next swiper-button-next--btn" ></div>
+        </div>
+        <!-- <i class="fa-solid fa-arrow-left"></i>
 
         <i class="fa-solid fa-circle-dot"></i>
         <i class="fa-solid fa-circle-dot"></i>
         <i class="fa-solid fa-circle-dot"></i>
         <i class="fa-solid fa-circle-dot"></i>
 
-        <i class="fa-solid fa-arrow-right"></i>
+        <i class="fa-solid fa-arrow-right"></i> -->
       </div>
     </section>
 
@@ -1385,6 +1561,7 @@
   </footer>
   
   <script src="./public/scripts/uuid.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="./src/index.js"></script>
 </body>
 </html>
